@@ -3,7 +3,11 @@
     "allow": [
       "Bash(mkdir:*)",
       "Bash(npm create:*)",
-      "Bash(npm install)"
+      "Bash(npm install)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss init:*)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": [],
     "ask": []
