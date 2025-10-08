@@ -31,7 +31,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-black dark:to-gray-900 transition-colors duration-300">
       {/* Header/Navbar */}
-      <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-border sticky top-0 z-10 shadow-sm transition-colors duration-300">
+      <header className="bg-white/90 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 sticky top-0 z-10 shadow-sm transition-all duration-300">
         <div className="container mx-auto px-4 py-4 max-w-6xl">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -48,20 +48,20 @@ export default function Dashboard() {
             <div className="flex items-center gap-2">
               <button
                 onClick={toggleTheme}
-                className="p-2 hover:bg-accent rounded-lg transition-colors"
+                className="p-2.5 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-all duration-200 border border-transparent dark:border-gray-600"
                 aria-label="Toggle theme"
               >
                 {theme === 'dark' ? (
-                  <Sun className="w-5 h-5 text-yellow-500" />
+                  <Sun className="w-5 h-5 text-yellow-400" />
                 ) : (
-                  <Moon className="w-5 h-5 text-muted-foreground" />
+                  <Moon className="w-5 h-5 text-gray-600" />
                 )}
               </button>
-              <button className="p-2 hover:bg-accent rounded-lg transition-colors">
-                <Settings className="w-5 h-5 text-muted-foreground" />
+              <button className="p-2.5 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-all duration-200">
+                <Settings className="w-5 h-5 text-gray-600 dark:text-gray-300" />
               </button>
-              <button className="p-2 hover:bg-accent rounded-lg transition-colors">
-                <LogOut className="w-5 h-5 text-muted-foreground" />
+              <button className="p-2.5 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-all duration-200">
+                <LogOut className="w-5 h-5 text-gray-600 dark:text-gray-300" />
               </button>
             </div>
           </div>
@@ -87,39 +87,39 @@ export default function Dashboard() {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-border transition-colors duration-300">
+          <div className="bg-white dark:bg-gray-800/90 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-muted-foreground font-medium">Total Tasks</p>
                 <p className="text-3xl font-bold text-foreground mt-1">{tasks.length}</p>
               </div>
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                <CheckSquare className="w-6 h-6 text-blue-600" />
+              <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/40 rounded-xl flex items-center justify-center">
+                <CheckSquare className="w-6 h-6 text-blue-600 dark:text-blue-400" />
               </div>
             </div>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-border transition-colors duration-300">
+          <div className="bg-white dark:bg-gray-800/90 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-muted-foreground font-medium">Active</p>
                 <p className="text-3xl font-bold text-foreground mt-1">{activeCount}</p>
               </div>
-              <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
-                <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
+              <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/40 rounded-xl flex items-center justify-center">
+                <div className="w-3 h-3 bg-orange-500 dark:bg-orange-400 rounded-full animate-pulse"></div>
               </div>
             </div>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-border transition-colors duration-300">
+          <div className="bg-white dark:bg-gray-800/90 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-muted-foreground font-medium">Completed</p>
                 <p className="text-3xl font-bold text-foreground mt-1">{completedCount}</p>
               </div>
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                <div className="w-6 h-6 border-4 border-green-600 rounded-full flex items-center justify-center">
-                  <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+              <div className="w-12 h-12 bg-green-100 dark:bg-green-900/40 rounded-xl flex items-center justify-center">
+                <div className="w-6 h-6 border-4 border-green-600 dark:border-green-400 rounded-full flex items-center justify-center">
+                  <div className="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full"></div>
                 </div>
               </div>
             </div>
@@ -127,7 +127,7 @@ export default function Dashboard() {
         </div>
 
         {/* Main Content */}
-        <main className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-border p-6 md:p-8 transition-colors duration-300">
+        <main className="bg-white dark:bg-gray-800/90 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 md:p-8 transition-all duration-300">
           <div className="mb-6">
             <h2 className="text-2xl font-bold text-foreground mb-2">Your Tasks</h2>
             <p className="text-muted-foreground">Stay organized and productive</p>

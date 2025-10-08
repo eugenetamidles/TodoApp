@@ -15,13 +15,13 @@ export default function Login() {
         <div className="flex justify-end mb-4">
           <button
             onClick={toggleTheme}
-            className="p-2 hover:bg-accent rounded-lg transition-colors"
+            className="p-3 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md border border-transparent dark:border-gray-600"
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? (
-              <Sun className="w-5 h-5 text-yellow-500" />
+              <Sun className="w-5 h-5 text-yellow-400" />
             ) : (
-              <Moon className="w-5 h-5 text-muted-foreground" />
+              <Moon className="w-5 h-5 text-gray-600" />
             )}
           </button>
         </div>
@@ -40,7 +40,7 @@ export default function Login() {
         </div>
 
         {/* Auth Card */}
-        <div className="bg-card dark:bg-gray-800 rounded-2xl shadow-2xl border border-border p-8 backdrop-blur-sm transition-colors duration-300">
+        <div className="bg-white dark:bg-gray-800/95 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 p-8 backdrop-blur-sm transition-all duration-300">
           <div className="space-y-5">
             {/* Email Input */}
             <div className="space-y-2">
@@ -98,7 +98,7 @@ export default function Login() {
               <div className="w-full border-t border-border"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-4 bg-card text-muted-foreground">or</span>
+              <span className="px-4 bg-white dark:bg-gray-800 text-muted-foreground">or</span>
             </div>
           </div>
 

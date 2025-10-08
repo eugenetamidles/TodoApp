@@ -29,7 +29,7 @@ export default function AddTaskInput({ onAdd }: AddTaskInputProps) {
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
             placeholder="What's on your mind? Add a new task..."
-            className="w-full pl-12 pr-4 py-4 border-2 border-input rounded-xl bg-gradient-to-r from-white to-blue-50/30 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-sm"
+            className="w-full pl-12 pr-4 py-4 border-2 border-input dark:border-gray-600 rounded-xl bg-gradient-to-r from-white to-blue-50/30 dark:from-gray-800 dark:to-gray-800/80 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-sm"
             maxLength={200}
           />
         </div>
