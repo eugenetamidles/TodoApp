@@ -32,7 +32,7 @@ export default function Login() {
             <CheckSquare className="w-8 h-8 text-primary-foreground" />
           </div>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
-            TaskFlow
+            TaskApp
           </h1>
           <p className="text-muted-foreground mt-2">
             {isLogin ? 'Welcome back! Sign in to continue' : 'Create your account to get started'}

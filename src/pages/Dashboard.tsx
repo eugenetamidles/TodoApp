@@ -40,7 +40,7 @@ export default function Dashboard() {
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
-                  TaskFlow
+                  TaskApp
                 </h1>
               </div>
             </div>
